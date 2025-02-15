@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Acciones - Undo/Redo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Agregar Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Acciones <span class="highlight">Undo/Redo</span></h1>
+
+        <input type="text" id="actionInput" placeholder="Escribe una acción">
+        
+        <div class="button-group">
+            <button id="addActionBtn"><i class="bi bi-plus-circle"></i> Agregar</button>
+            <button id="undoBtn"><i class="bi bi-arrow-counterclockwise"></i> Deshacer</button>
+            <button id="redoBtn"><i class="bi bi-arrow-clockwise"></i> Rehacer</button>
+        </div>
+
+        <h2>Historial de Acciones</h2>
+        <ul id="historyList"></ul>
+
+        <footer>
+            <p>Desarrollado por <strong>Alejandro Osorio</strong> |
+            <a href="https://github.com/aleosorio22/Ejercicio3" target="_blank">
+                <i class="bi bi-github"></i> Ver en GitHub
+            </a></p>
+        </footer>
+    </div>
+
+    <script src="Ejercicio3.js"></script>
+</body>
+</html>

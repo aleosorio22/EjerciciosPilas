@@ -1,0 +1,148 @@
+/* Paleta de colores */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-light: #f4f4f4;
+    --background-dark: #1e1e1e;
+    --text-light: #ffffff;
+    --text-dark: #333;
+}
+
+/* Aplicar modo oscuro/claro automático */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-light);
+    }
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        background: #2c2c2c;
+    }
+}
+
+/* Títulos */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* Input */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0px 0px 5px var(--primary-color);
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#addActionBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#undoBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#redoBtn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+button i {
+    font-size: 1.2em;
+}
+
+/* Lista de historial */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ddd;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+    li {
+        background: #444;
+    }
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
